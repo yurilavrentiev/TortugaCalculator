@@ -12,9 +12,9 @@ async function calculate(address) {
   const regex = /^[\w]{42}$/i;
   if (regex.test(address)) {
     input.className = 'valid';
-    const data = await fetch("https://mintium.space/api/usersTortugaFarm.json").then((responce) => responce.json());
+    const data = await fetch("https://api2.quota.team/data/bonusFriday.json").then((responce) => responce.json());
     
-    contentContainer.innerText = `Your bonuses are:\nDAIQUIRI: ${data.DAIQUIRI[address] ? data.DAIQUIRI[address].toFixed(4) : 0}\nAAPLQQX: ${data.AAPLQQX[address] ? data.AAPLQQX[address].toFixed(4) : 0}\nBARREL: ${data.BARREL[address] ? data.BARREL[address].toFixed(4) : 0}\nYELLOW: ${data.YELLOW[address] ? data.YELLOW[address].toFixed(4) : 0}\nMICROB: ${data.MICROB[address] ? data.MICROB[address].toFixed(4) : 0}\nISLAND: ${data.ISLAND[address] ? data.ISLAND[address].toFixed(4) : 0}\nUBERQQX: ${data.UBERQQX[address] ? data.UBERQQX[address].toFixed(4) : 0}`
+    contentContainer.innerText = `Your bonuses are:\nDAIQUIRI: ${data.DAIQUIRI[address] ? data.DAIQUIRI[address].toFixed(4) : 0}\nAAPLQQX: ${data.AAPLQQX[address] ? data.AAPLQQX[address].toFixed(4) : 0}\nBARREL: ${data.BARREL[address] ? data.BARREL[address].toFixed(4) : 0}\nYELLOW: ${data.YELLOW[address] ? data.YELLOW[address].toFixed(4) : 0}\nMICROB: ${data.MICROB[address] ? data.MICROB[address].toFixed(4) : 0}\nISLAND: ${data.ISLAND[address] ? data.ISLAND[address].toFixed(4) : 0}\nUBERQQX: ${data.UBERQQX[address] ? data.UBERQQX[address].toFixed(4) : 0}\nNTDOYQX: ${data.NTDOYQX[address] ? data.NTDOYQX[address].toFixed(4) : 0}`
     nftInfoContainer.innerText = '';
   } else {
     input.className = 'invalid';
@@ -28,7 +28,7 @@ async function showBallance(address) {
   if (regex.test(address)) {
     input.className = 'valid';
     const ballanceData = await fetch(`https://explorer-api.minter.network/api/v2/addresses/${address}`).then((responce) => responce.json())
-    const nftOwners = await fetch('https://mintium.space/api/nftOwners.json').then((responce) => responce.json());
+    const nftOwners = await fetch('https://api2.quota.team/data/nftOwners.json').then((responce) => responce.json());
 
     let nftArray = [];
     for (key in nftOwners) {
