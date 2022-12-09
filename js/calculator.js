@@ -45,7 +45,7 @@ async function showBallance(address) {
       })
       .then((nftTotal) => nftInfoContainer.innerText = `Total ballance of all NFT's: \n${nftTotal ? nftTotal.toFixed(4) : 0} Tortuga`)
         const ballanceArray = [...ballanceData.data.balances].filter((element) => element.coin.id === 3673);
-        contentContainer.innerText = `Total Tortuga ballance: ${totalWalletBallance[address] ? totalWalletBallance[address].toFixed(4) : 0}\nYou have ${nftArray.length} NFT's linked to your wallet`;
+        contentContainer.innerText = `Current Tortuga ballance: ${totalWalletBallance[address] ? totalWalletBallance[address].toFixed(4) : 0}\nYou have ${nftArray.length} NFT's linked to your wallet`;
 
   } else {
     input.className = 'invalid';
