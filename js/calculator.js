@@ -93,7 +93,7 @@ async function showBallance(address) {
     }\nYou have ${nftArray.length} NFT's linked to your wallet`;
   } else {
     input.className = "invalid";
-    contentContainer.innerText = "You entered invalid wallet address";
+    contentContainer.innerText = "Please, enter a valid wallet address";
     nftInfoContainer.innerText = "";
   }
 }
