@@ -37,7 +37,14 @@ async function calculate(address) {
       data.NTDOYQX[address] ? data.NTDOYQX[address].toFixed(4) : 0
     }\nBIGMAC: ${
       data.BIGMAC[address] ? data.BIGMAC[address].toFixed(4) : 0
-    }\nQUOTA: ${data.QUOTA[address] ? data.QUOTA[address].toFixed(4) : 0}`;
+    }\nQUOTA: ${
+      data.QUOTA[address] ? data.QUOTA[address].toFixed(4) : 0
+    }\nOBSIDIAN: ${
+      data.OBSIDIAN[address] ? data.OBSIDIAN[address].toFixed(4) : 0
+    }\nSAPPHIRE: ${
+      data.SAPPHIRE[address] ? data.SAPPHIRE[address].toFixed(4) : 0
+    }`;
+
     nftInfoContainer.innerText = "";
   } else {
     input.className = "invalid";
